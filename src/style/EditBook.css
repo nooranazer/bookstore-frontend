@@ -1,0 +1,124 @@
+.editbook{
+  /* background-image: url(../../public/bg-bkstore8.png);
+  background-size: cover; */
+  background-color: #343a40;
+}
+.edit-book-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.edit-book-container h2 {
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 25px;
+}
+
+.edit-book-form label {
+  font-weight: 600;
+  margin-top: 12px;
+  color: #495057;
+  display: block;
+}
+
+.edit-book-form input[type="text"],
+.edit-book-form input[type="number"],
+.edit-book-form input[type="file"],
+.edit-book-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.edit-book-form input:focus,
+.edit-book-form select:focus {
+  border-color: #80bdff;
+  outline: none;
+}
+
+.edit-book-form .text-danger {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.image-preview {
+  display: block;
+  max-width: 150px;
+  max-height: 150px;
+  margin: 15px 0;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.edit-book-form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #198754;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-book-form button[type="submit"]:hover {
+  background-color: #157347;
+}
+
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .edit-book-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .edit-book-form input,
+  .edit-book-form select,
+  .edit-book-form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .edit-book-container h2 {
+    font-size: 22px;
+  }
+
+  .image-preview {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-book-container {
+    padding: 15px;
+  }
+
+  .edit-book-form label {
+    font-size: 14px;
+  }
+
+  .edit-book-form button {
+    font-size: 15px;
+  }
+
+  .edit-book-container h2 {
+    font-size: 20px;
+  }
+}

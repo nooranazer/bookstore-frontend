@@ -1,0 +1,76 @@
+.register {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../public/bg5-boookstore.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Glassmorphic container */
+.register .register-form {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 35px 30px;
+  border-radius: 18px;
+  max-width: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Heading */
+.register .register-form h3 {
+  text-align: center;
+  font-weight: bold;
+  color: #1d1c1b;
+  margin-bottom: 24px;
+  font-size: 26px;
+}
+
+/* Inputs */
+.register .form-control,
+.register .form-select {
+  background-color: rgba(240, 240, 240, 0.9);
+  color: #252424;
+  border: none;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register .form-control::placeholder {
+  color: #0e0e0d;
+}
+
+/* Focus effect */
+.register .form-control:focus,
+.register .form-select:focus {
+  background-color: rgba(255, 255, 255, 0.35);
+  color: #121111;
+  outline: none;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+/* Submit button */
+.register button {
+  background-color: #ff914d;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register button:hover {
+  background-color: #e56b00;
+  transform: translateY(-2px);
+}

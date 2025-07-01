@@ -1,0 +1,79 @@
+/* Full-page layout */
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../public/bg4-boookstore.jpg'); /* ✅ your bg image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Unique glass container for login */
+.login-container {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 40px 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  /* width: 100%; */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+/* Heading */
+.login-container h2 {
+  margin-bottom: 25px;
+  color: #2e2e2e;
+  font-size: 26px;
+}
+
+/* Inputs */
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: rgba(240, 240, 240, 0.9);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff914d;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #e56b00;
+}
+
+/* Sign-up Text */
+.register-text {
+  font-size: 14px;
+  margin-top: 12px;
+  color: #2e2e2e;
+}
+
+.signup-link {
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.signup-link:hover {
+  color: #0056b3;
+}
