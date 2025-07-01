@@ -41,7 +41,7 @@ const BookList = () => {
     <div className="container mt-4">
       <div className="d-flex justify-content-between align-items-center mb-4">
        <div className="text-center mb-4">
-          <h2 className="fw-bold text-light">📖 Welcome to BookHive</h2>
+          <h2 className="fw-bold ">📖 Welcome to BookHive</h2>
            <p className="text-muted">Find your next great read from our curated collection.</p>
         </div>
         {role === 'seller' && (

@@ -29,10 +29,8 @@ const handleDelete = (id) => {
 };
 
   useEffect(() => {
-    viewedBook()
+    viewedBook()  
      // eslint-disable-next-line 
-     // react-hooks/exhaustive-deps
-   
   }, [id]);
 
   const viewedBook = async () => {

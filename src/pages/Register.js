@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React  from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../style/Register.css' // custom CSS file for styling
 import api from '../api'
@@ -35,11 +35,11 @@ export const schema = yup.object().shape({
 
 
 const Register = () => {
-  const [username, setUsername] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [role, setRole] = useState('buyer')
-  const [image, setImage] = useState(null)
+  // const [username, setUsername] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [password, setPassword] = useState('')
+  // const [role, setRole] = useState('buyer')
+  // const [image, setImage] = useState(null)
   const navigate = useNavigate()
 
 
@@ -47,16 +47,18 @@ const handleSubmitButton = async (data) => {
  
 
   const formData = new FormData();
-  formData.append('username', username);
-  formData.append('email', email);
-  formData.append('password', password);
-  formData.append('role', role);
-  formData.append('image', image);
+  formData.append('username', data.username);
+  formData.append('email', data.email);
+  formData.append('password', data.password);
+  formData.append('role', data.role);
+  formData.append('image', data.image[0]); 
+;
 
 
     api.post('/auth/register', formData)
     .then((res) => {
      alert('Registration successful');
+     reset();
      
      const { token, data} = res.data;
      
@@ -78,9 +80,10 @@ const handleSubmitButton = async (data) => {
   })
 };
 
- const { register, handleSubmit, formState: { errors } } = useForm({
+ const { register, handleSubmit, reset, formState: { errors } } = useForm({
   resolver: yupResolver(schema),
 });
+
 
   return (
     <div className='register'>
@@ -135,16 +138,12 @@ const handleSubmitButton = async (data) => {
             {errors.image && <p className='text-danger'>{errors.image.message}</p>}
           </div>
           <div className="mb-3">
-            <select
-              className='form-select'
-                {...register ('role')}
-              // value={role}
-              // onChange={(e) => setRole(e.target.value)}
-              // required
-            >
+          <select className="form-select" {...register('role')}>
+              <option value="">Select role</option> {/* ✅ Force selection */}
               <option value="buyer">Buyer</option>
               <option value="seller">Seller</option>
-            </select>
+          </select>
+
             {errors.role && <p className='text-danger'>{errors.role.message}</p>}
           </div>
           <button type='submit' className='btn btn-primary w-100'>Submit</button>

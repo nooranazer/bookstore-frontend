@@ -50,7 +50,7 @@ const EditBook = () => {
     // category: ''
   });
 
-  const {register, handleSubmit, formState: {errors}, reset, setValue} = useForm({
+  const {register, handleSubmit, formState: {errors},  setValue} = useForm({
     resolver: yupResolver(schema),})
 
   useEffect(() => {
@@ -75,6 +75,7 @@ const EditBook = () => {
     .catch((error) => {
       console.error('Error fetching book:', error);
     });
+    // eslint-disable-next-line 
   }, [id, token]);
 
   // const handleChange = (e) => {

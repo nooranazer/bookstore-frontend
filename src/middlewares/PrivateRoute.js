@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({ children }) => {
@@ -9,4 +9,3 @@ const PrivateRoute = ({ children }) => {
 
 export default PrivateRoute
 
-//create public route

@@ -34,8 +34,8 @@ const EditProfile = () => {
     // image: ''
   });
 
-  const [file, setFile] = useState(null);
-   const {register, handleSubmit, formState: {errors}, reset, setValue} = useForm({
+  const [file ] = useState(null); //setFile before validation
+   const {register, handleSubmit, formState: {errors}, reset} = useForm({
       resolver: yupResolver(schema),})
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const EditProfile = () => {
     .catch(() => {
       alert('Failed to fetch user data');
     });
-  }, [token]);
+  }, [token, reset]);
 
   // const handleChange = (e) => {
   //   const { name, value } = e.target;
