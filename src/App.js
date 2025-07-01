@@ -4,7 +4,6 @@ import Appbar from './components/Appbar';
 import BookList from './pages/BookList';
 import Login from './pages/Login';
 import Register from './pages/Register';
-//import PrivateRoute from './middlewares/PrivateRoute';
 import ViewBook from './pages/ViewBook';
 import AddBook from './pages/AddBook';
 import EditBook from './pages/EditBook';
