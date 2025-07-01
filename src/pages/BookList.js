@@ -69,10 +69,10 @@ const BookList = () => {
                   className="card-img-top"
                   alt={book.title}
                   style={{
-                    height: '250px',
+                    // height: '340px',
                     objectFit: 'cover',
-                    borderTopLeftRadius: '10px',
-                    borderTopRightRadius: '10px'
+                    // borderTopLeftRadius: '10px',
+                    // borderTopRightRadius: '10px'
                   }}
                 />
                
