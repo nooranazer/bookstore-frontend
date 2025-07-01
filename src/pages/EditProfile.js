@@ -34,7 +34,7 @@ const EditProfile = () => {
     // image: ''
   });
 
-  const [file ] = useState(null); //setFile before validation
+  // const [file,setFile ] = useState(null); //setFile before validation
    const {register, handleSubmit, formState: {errors}, reset} = useForm({
       resolver: yupResolver(schema),})
 
@@ -72,8 +72,13 @@ const EditProfile = () => {
     const formData = new FormData();
     formData.append('username', data.username);
     formData.append('email', data.email);
-    if (file) {
-      formData.append('image', file);
+
+    // if (file) {
+    //   formData.append('image', file);
+    // }
+
+    if (data.image && data.image.length > 0) {
+      formData.append('image', data.image[0]);
     }
 
     api.patch('/user/editprofile', formData, {
