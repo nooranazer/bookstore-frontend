@@ -103,9 +103,10 @@ const EditBook = () => {
     formData.append("stock", data.stock);
     formData.append("category", data.category);
 
-    if (data.image instanceof File) {
-      formData.append("image", data.image);
-    }
+   if (data.image && data.image.length > 0) {
+   formData.append("image", data.image[0]);
+  }
+
 
     api.patch(`/books/update/${id}`, formData, {
       headers: {

@@ -17,7 +17,11 @@ const handleDelete = (id) => {
     return; // If user clicks "Cancel" stop here
   }
 
-  api.delete(`/books/delete/${id}`)
+  api.delete(`/books/delete/${id}`, {
+  headers: {
+    Authorization: `Bearer ${token}`
+  }
+  })
     .then((res) => {
       alert('Book deleted');
       setBook(null);
