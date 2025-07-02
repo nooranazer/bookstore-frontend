@@ -148,7 +148,7 @@ const handleSubmitButton = async (data) => {
           </div>
           <button type='submit' className='btn btn-primary w-100'>Submit</button>
 
-          <p>Already have an account? <Link to="/login">Login</Link></p>
+          <p>Already have an account? <Link to="/">Login</Link></p>
         </form>
       </div>
     </div>
