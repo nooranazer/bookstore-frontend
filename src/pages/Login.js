@@ -9,10 +9,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 export const schema = yup.object().shape({
   email: yup.string().required("email is required"),
-  password: yup
-  .string()
+  password: yup .string()
   .required('password is required')
-  //.min(6, 'Password must be at least 6 characters')
   
 })
 
@@ -21,8 +19,8 @@ export const Login = () => {
   // const [password, setPassword] = useState('');
 
   const navigate = useNavigate();
-
-   const { register, handleSubmit, formState: { errors } } = useForm({
+  
+  const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
   });
 
@@ -31,7 +29,7 @@ export const Login = () => {
     if (token) {
       // Optional: navigate('/list');
     }
-  }, [navigate]);
+  }, [navigate  ]);
 
   const handleSubmitButton = (data) => {
     api.post('/auth/', {

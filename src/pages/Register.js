@@ -33,14 +33,13 @@ export const schema = yup.object().shape({
 
 });
 
-
 const Register = () => {
   // const [username, setUsername] = useState('')
   // const [email, setEmail] = useState('')
   // const [password, setPassword] = useState('')
   // const [role, setRole] = useState('buyer')
   // const [image, setImage] = useState(null)
-  const navigate = useNavigate()
+const navigate = useNavigate()
 
 
 const handleSubmitButton = async (data) => {
@@ -52,8 +51,6 @@ const handleSubmitButton = async (data) => {
   formData.append('password', data.password);
   formData.append('role', data.role);
   formData.append('image', data.image[0]); 
-;
-
 
     api.post('/auth/register', formData)
     .then((res) => {

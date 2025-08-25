@@ -35,17 +35,15 @@ return (
               <li className="nav-item">
                 <a className="nav-link text-light" href="/list">Home</a>
               </li>
-              {/* <li className="nav-item">
-                <a className="nav-link text-light" href="#">Categories</a>
-              </li> */}
+              <li className="nav-item">
+                <Link to={'/viewprofile'} className="nav-link text-light" href="#">profile </Link>
+              </li>
                <li>
                 <button className="nav-link text-light btn btn-link" onClick={handleLogout} type="button"> Logout
                 </button>
               </li>
 
-              <li className="nav-item">
-                <Link to={'/viewprofile'} className="nav-link text-light" href="#">profile </Link>
-              </li>
+              
             </ul>
           </div>
         </div>

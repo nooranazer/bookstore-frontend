@@ -1,60 +1,70 @@
-.editbook{
-  /* background-image: url(../../public/bg\ img9.jpg);
-  background-size: cover; */
-  background-color: #4fed2869;
-  padding: 40px 0px;
-}
-.edit-book-container {
-  max-width: 600px;
-  margin: 0px auto;
-  padding: 30px;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+/* Full-page layout for EditBook */
+.editbook {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-image: url('../../public/bg4-boookstore.jpg'); /* same bg image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: all 0.3s ease;
+  padding: 40px 0;
 }
 
+/* Glass-like container */
+.edit-book-container {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 40px 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Heading */
 .edit-book-container h2 {
   text-align: center;
-  color: #343a40;
+  color: #2e2e2e;
+  font-size: 26px;
   margin-bottom: 25px;
 }
 
+/* Labels */
 .edit-book-form label {
+  display: block;
   font-weight: 600;
   margin-top: 12px;
-  color: #495057;
-  display: block;
+  margin-bottom: 6px;
+  color: #2e2e2e;
 }
 
+/* Inputs and select */
 .edit-book-form input[type="text"],
 .edit-book-form input[type="number"],
 .edit-book-form input[type="file"],
 .edit-book-form select {
   width: 100%;
-  padding: 10px 12px;
+  padding: 12px;
   border-radius: 8px;
-  border: 1px solid #ced4da;
-  margin-top: 6px;
-  margin-bottom: 12px;
+  border: none;
+  margin-bottom: 16px;
   font-size: 16px;
-  transition: border-color 0.3s ease;
+  background-color: rgba(240, 240, 240, 0.9);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.edit-book-form input:focus,
-.edit-book-form select:focus {
-  border-color: #80bdff;
-  outline: none;
-}
-
-.edit-book-form .text-danger {
+/* Error text */
+.text-danger {
   color: #dc3545;
   font-size: 0.875rem;
   margin-top: -8px;
   margin-bottom: 8px;
 }
 
+/* Image preview */
 .image-preview {
   display: block;
   max-width: 150px;
@@ -65,28 +75,29 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Submit button */
 .edit-book-form button[type="submit"] {
   width: 100%;
   padding: 12px;
-  background-color: #198754;
+  background-color: #5176a1; /* same as login button */
   color: white;
-  font-weight: bold;
   font-size: 16px;
   border: none;
-  border-radius: 10px;
-  margin-top: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
 .edit-book-form button[type="submit"]:hover {
-  background-color: #157347;
+  background-color: #e56b00; /* same hover as login button */
 }
 
-/* ✅ RESPONSIVE DESIGN */
+/* Responsive design */
 @media (max-width: 768px) {
   .edit-book-container {
-    padding: 20px;
-    margin: 20px;
+    padding: 30px 20px;
   }
 
   .edit-book-form input,
@@ -101,14 +112,14 @@
   }
 
   .image-preview {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 120px;
+    max-height: 120px;
   }
 }
 
 @media (max-width: 480px) {
   .edit-book-container {
-    padding: 15px;
+    padding: 20px 15px;
   }
 
   .edit-book-form label {
@@ -121,5 +132,10 @@
 
   .edit-book-container h2 {
     font-size: 20px;
+  }
+
+  .image-preview {
+    max-width: 100px;
+    max-height: 100px;
   }
 }
